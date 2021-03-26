@@ -1,0 +1,245 @@
+$green: #3C5645;
+
+body {
+  margin: 0;
+  font-family: 'futura-pt';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  background-color: black;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.logo {
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 999;
+}
+
+.wrapper, .line__wrapper {
+  width: 1200px !important;
+  margin: auto !important;
+}
+
+.s1 {
+  &::after {
+    content: "";
+    background: url('./Media/banner.jpg');
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index:-1; 
+  }
+
+  & .wrapper > p {
+    width: 666px;
+  }
+}
+
+
+.line__wrapper {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 0;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 202px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #3C5645;
+  text-align: left;
+  line-height: 170px;
+  font-style: italic;
+  margin-bottom: 48px;
+  font-family: 'futura-pt-condensed';
+}
+
+h1 span {
+  -webkit-text-stroke-color: white;
+  
+}
+
+h2 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #3C5645;
+  font-size: 112px;
+  line-height: 95px;
+  font-style: italic;
+  font-family: 'futura-pt-condensed';
+}
+
+.leftText {
+  text-align: left;
+}
+
+#fullpage {
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: #2C2C2C;
+  left: 0;
+  top: 0;
+  opacity: 0.2;
+  z-index: -1;
+
+  &:nth-child(2) {
+    left: 25%;
+  }
+
+  &:nth-child(3) {
+    left: 50%;
+  }
+
+  &:nth-child(4) {
+    left: 75%;
+  }
+
+  &:nth-child(5) {
+    left: 100%;
+  }
+}
+
+.portfolio {
+  position: relative;
+
+  & > .screenshot {
+    position: absolute;
+    left: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  & > .wrapper__infos {
+    position: absolute;
+    right: 48px;
+    
+    top: 50%;
+    transform: translateY(-50%);
+    backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
+    padding: 64px;
+    width: 627px;
+    text-align: left;
+
+    & > span {
+      position: absolute;
+      top: 0;
+      left: 0;      
+      width: 100%;
+      height: 100%;
+      background: #111111;
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    & > h2 {
+      font-size: 32px;
+      -webkit-text-fill-color: white;
+      -webkit-text-stroke-width: 0px;
+      line-height: 100%;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    & > .btn {
+      position: absolute;
+      right: 64px;
+      bottom: -32px;
+      width: 308px;
+    }
+  }
+}
+
+.fp-next {
+  position: absolute !important;
+  right: -45px !important;
+}
+
+.fp-prev {
+  position: absolute !important;
+  left: -45px !important;
+}
+
+// header ul li a:after {
+//   width: 0;
+// }
+
+// .activeMenu {
+//   position: relative;
+  
+
+//   &::after, &:hover:after {
+//     content: '';
+//     transition: width 0.5s;
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     height: 2px;
+//     background-color: $green;
+//   }
+// }
+
+// header ul li a:hover:after, .activeMenu:after {
+//   width: 100% !important;
+// }
+
+.arrow {
+  height: 60px;
+  width: 60px;
+  background-color: $green;
+  opacity: 0.3;
+  position: absolute;
+    right: 64px;
+    top: 90vh;
+    cursor: pointer;
+    z-index: 999;
+    
+
+  &__icon {
+    width: 23px;
+    height: 13px;
+    background-image: url('./Media/arrow.svg');
+  }
+}
+
+.screenshot {
+  height: 615px;
+  width: 615px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn {
+  font-family: 'futura-pt-condensed';
+  font-size: 22px;
+  border: none;
+  height: 72px;
+  width: 25%;
+  background-color: $green;
+  float: left;
+  color: white;
+  letter-spacing: 1px;
+  font-style: italic;
+  margin-top: 48px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}

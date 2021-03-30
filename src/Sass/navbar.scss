@@ -56,3 +56,10 @@ header ul li a:after {
     background-color: $green;
     transition: width 0.5s;
   }
+
+  
+@media screen and (max-width: 1040px) {
+  header {
+    display: none;
+  }
+}

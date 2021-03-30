@@ -1,0 +1,162 @@
+@import './variables.scss';
+
+.form {
+    width: var(--width);
+    margin: auto !important;
+    & > h2 {
+        margin-top: 0;
+        margin-bottom: 48px;
+        text-align: left;
+    }
+
+    & > form {
+        display: grid;
+        column-gap: 32px;
+        row-gap: 16px;
+        grid-template-columns: 1fr 1fr;
+
+        & > .formGroup {
+            display: flex;
+            flex-direction: column;
+        }
+
+        & > .large {
+            grid-column: span 2;
+        }
+
+        & > .terms > button {
+            grid-column: span 2;
+            margin-top: 0 !important;
+            width: 308px;
+        }
+
+    }
+}
+
+.terms > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: right;
+
+    & > p {
+        margin-right: 16px;
+    }
+}
+
+.succesMessage {
+    color: white;
+    background-color: #72a182;
+}
+
+.errorMessage {
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+.formGroup > label {
+    text-align: left;
+    font-family: 'futura-pt-condensed';
+    font-size: 32px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.formGroup > input, .formGroup > textarea {
+    background-color: var(--firstColor) !important;
+    padding: 16px 32px;
+    color: white !important;
+    font-size: 22px;
+    font-family: 'futura-pt';
+    font-weight: 200;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.formGroup > input {
+    height: 72px; 
+}
+
+.formGroup > textarea {
+    height: 200px;
+}
+
+.succesMessage, .errorMessage {
+    grid-column: span 2;
+    box-sizing: border-box;
+    padding: 8px;
+    width: 100%;
+    font-family: 'futura-pt';
+    letter-spacing: 2px;
+}
+
+.terms {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: 16px;
+
+    & > input {
+        margin: 0 16px;
+    }
+
+    & > div {
+        margin-right: 16px;
+    }
+
+    & > div > label {
+        text-align: right;
+        margin-right: 16px;
+    }
+}
+
+@media screen and (max-width: 1250px), (max-height: 760px) {
+    .formGroup > label {
+        font-size: 22px;
+    }
+    
+    .formGroup > input, .formGroup > textarea {
+        font-size: 22px;
+    }
+}
+
+
+@media screen and (max-width: 880px) {
+
+    .form { 
+        & > form {
+            & > .formGroup {
+                grid-column: span 2;
+            }
+        }
+
+        & > h2 {
+            margin-bottom: 16px;
+        }
+
+    }
+    
+
+    .formGroup > input {
+        height: 48px; 
+    }
+    
+    .formGroup > textarea {
+        height: 120px;
+    }
+
+    .terms {
+        margin-top: 0px;
+        flex-direction: column;
+
+        & > div {
+            margin-right: 0;
+        }
+    }
+}

@@ -6,8 +6,9 @@ export function NavBar() {
         <header>
             <ul>
                 <li><a className="activeMenu" href="#banner">Accueil</a></li>
-                <li><a href="#portfolio">Projets</a></li>
                 <li><a href="#about">A propos</a></li>
+                <li><a href="#portfolio">Projets</a></li>
+                
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </header>

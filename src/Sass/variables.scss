@@ -1,0 +1,36 @@
+html {
+    --width: 1231px !important;
+    --firstColor: #3C5645;
+    margin: 0;
+    font-family: 'futura-pt';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+    background-color: black;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 1380px), (max-height: 760px) {
+    html {
+        --width: 870px !important;
+        font-size: 20px;
+        h1, h2 {
+            font-size: 72px;
+            line-height: 60px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 880px) {
+    html {
+        --width: 90% !important;
+        font-size: 16px;
+
+        h1, h2 {
+            font-size: 56px;
+            line-height: 50px;
+        }
+    }
+}

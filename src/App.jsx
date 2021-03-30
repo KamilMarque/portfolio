@@ -30,7 +30,7 @@ function App() {
       </div>
     );
     return (
-      <div className="section wrapper">
+      <div className="section wrapper portfolio">
         {listItems}
       </div>
     )
@@ -48,7 +48,8 @@ function App() {
       <ReactFullpage 
         licenseKey = '79711ABA-ECA34F1A-8156AE2A-181EAA64'
         scrollingSpeed = '1500'
-        anchors={['banner', 'portfolio', 'about', 'contact']}
+        anchors={['banner', 'about', 'portfolio', 'contact']}
+        responsiveWidth = '880'
         onLeave={onLeave.bind(this)}
 
         render={({ state, fullpageApi }) => {
@@ -65,21 +66,27 @@ function App() {
                         </g>
                       </svg>
                         <h1>DEVELOPPEUR <br /> <span>FRONT-END</span></h1>
-                        <p className="leftText">Bienvenue sur mon portfolio. Je m'appelle Kamil Marque, je suis développeur Front end, formé 3 ans à épitech et diplomé d'Openclassrooms. Aujourd'hui, je recherche un emploi dans une équipe avec qui je pourrais partager des connaissances. </p>
-                        <Button to='#portfolio'>DÉCOUVRIR MES PROJETS</Button>
+                        <p className="leftText">A la recherche d'un emploi dans une équipe avec qui je pourrai partager.</p>
+                        <Button to='#about'>Me découvrir</Button>
+                      </div>
+                    </div>
+
+                    <div className="section s3">
+                      <div className="wrapper">
+                        <h2>Vous recherchez un <br/> developpeur front-end ? </h2>
+                        <p>je m'appelle Kamil Marque et je suis développeur front end. J'ai commencé le développement en 2015 à l'école Epitech Toulouse, où j'ai découvert l'algorithmie. Jusqu'à ma 3e année j'ai principalement développé mes projets en langage C.</p>
+                        <p>Je me suis ensuite dirigé vers une formation OpenClassrooms en tant que développeur front-end pour accélérer ma pratique.</p>
+                        <p>J'ai réalisé une 10ene de projets où j'ai découvert le HTML/CSS et le Javascript. À la fin de ma formation j'ai continué d'apprendre en autodidacte différentes librairies/Framework en tant que freelance.</p>
+                        <p>Aujourd'hui je suis aussi à l'aise avec VueJs/NuxtJs car j'ai réalisé quelques missions avec ces Framework. J'ai ensuite décidé de découvrir ReactJs en développant ce site.</p>
+                        <p>Au long terme, je souhaite devenir un développeur fullstack et m'intégrer dans une équipe parce que franchement, coder seul c'est vraiment ennuyeux. C'est pour cela que j'ai besoin de vous, je souhaite faire parti d'une équipe de développeurs avec qui je pourrais échanger.</p>
+                        {/* <Button to='https://github.com/KamilMarque'>Github</Button> */}
+                        <a className="github" href='https://github.com/KamilMarque' target="_blank" rel="noreferrer">Mon Github</a>
                       </div>
                     </div>
 
                     <PortfolioList portfolio={portfolio} />
 
-                    <div className="section s3">
-                      <div className="wrapper">
-                        <h2>Vous recherchez un <br/> developpeur front-end ? </h2>
-                        <p>Bienvenue sur mon portfolio. Je m'appelle Kamil, je suis développeur Front end, formé 3 ans à épitech et diplomé d'Openclassrooms. Aujourd'hui, je recherche un emploi dans une chouette équipe.  Bienvenue sur mon portfolio. Je m'appelle Kamil, je suis développeur Front end, formé 3 ans à épitech et diplomé d'Openclassrooms. Aujourd'hui, je recherche un emploi dans une chouette équipe.  BLABLA COMPETENCES et ce que tu peux apporter a l'entreprise</p>
-                        <p>Bienvenue sur mon portfolio. Je m'appelle Kamil, je suis développeur Front end, formé 3 ans à épitech et diplomé d'Openclassrooms. Aujourd'hui, je recherche un emploi dans une chouette équipe. Bienvenue sur mon portfolio. Je m'appelle Kamil, je suis développeur Front end, formé 3 ans à épitech et diplomé d'Openclassrooms. Aujourd'hui, je recherche un emploi dans une chouette équipe.  BLABLA PERSONALITE + Hobbies</p>
-                        <Button>ME CONTACTER</Button>
-                      </div>
-                    </div>
+                    
 
                     <div className="section s4">
                       <ContactForm></ContactForm>
